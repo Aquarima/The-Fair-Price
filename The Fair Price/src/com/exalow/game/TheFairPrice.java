@@ -57,7 +57,8 @@ public class TheFairPrice {
     }
 
     public static long getTime() {
-        return (end - start) / 1000;
+        time = (end - start) / 1000;
+        return time;
     }
 
     public static int getTries() {
