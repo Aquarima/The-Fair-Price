@@ -12,7 +12,6 @@ public class DifficultySelector {
     private List<Difficulty> difficulties = new LinkedList<>();
     private static String input;
     private Difficulty difficulty;
-    private static int maxPrice;
 
     public DifficultySelector() {
 

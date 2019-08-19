@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class TheFairPrice {
 
-    private static long time;
     private static int tries;
     private static long start = 0;
     private static long end = 0;
