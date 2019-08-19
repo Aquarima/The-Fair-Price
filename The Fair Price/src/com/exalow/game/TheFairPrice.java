@@ -14,7 +14,6 @@ public class TheFairPrice {
 
     public static void main(String[] args) {
 
-        String answer;
         int input = 0;
         long start = 0;
         long end = 0;
@@ -25,12 +24,11 @@ public class TheFairPrice {
         DifficultySelector difficultySelector = new DifficultySelector();
 
         int maxPrice = DifficultySelector.getMaxPrice();
-
         int price = random.nextInt(maxPrice);
 
         System.out.println("\nChoose a number between 0 <-> " + maxPrice);
-        start = System.currentTimeMillis();
 
+        start = System.currentTimeMillis();
         while (input != price) {
 
             try {
@@ -50,7 +48,6 @@ public class TheFairPrice {
             tries++;
 
         }
-
         end = System.currentTimeMillis();
 
         time = (end - start) / 1000;
