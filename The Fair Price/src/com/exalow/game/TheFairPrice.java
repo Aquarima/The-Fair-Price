@@ -11,12 +11,12 @@ public class TheFairPrice {
 
     private static long time;
     private static int tries;
+    private static long start = 0;
+    private static long end = 0;
 
     public static void main(String[] args) {
 
         int input = 0;
-        long start = 0;
-        long end = 0;
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -59,6 +59,7 @@ public class TheFairPrice {
     }
 
     public static long getTime() {
+        time = (end - start) / 1000;
         return time;
     }
 
