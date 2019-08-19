@@ -1,6 +1,7 @@
 package com.exalow.game;
 
 import com.exalow.game.utils.DifficultySelector;
+import com.exalow.game.utils.Statistics;
 
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -8,12 +9,14 @@ import java.util.Scanner;
 
 public class TheFairPrice {
 
+    private static long time;
+    private static int tries;
+
     public static void main(String[] args) {
 
         String answer;
         int maxPrice;
         int input = 0;
-        int tries = 0;
         long start = 0;
         long end = 0;
 
@@ -51,14 +54,19 @@ public class TheFairPrice {
 
         end = System.currentTimeMillis();
 
-        double time = (end - start) / 1000;
+        time = (end - start) / 1000;
 
         System.out.println("\nCongratulations, The fair price was " + price + " !");
-        System.out.println("\n----------[STATS]----------");
-        System.out.println("Time : " + time + "s");
-        System.out.println("Tries : " + tries);
-        System.out.println("---------------------------");
+
+        new Statistics().getStatistics();
 
     }
 
+    public static long getTime() {
+        return time;
+    }
+
+    public static int getTries() {
+        return tries;
+    }
 }
