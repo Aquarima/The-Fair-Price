@@ -50,8 +50,6 @@ public class TheFairPrice {
         }
         end = System.currentTimeMillis();
 
-        time = (end - start) / 1000;
-
         System.out.println("\nCongratulations, The fair price was " + price + " !");
 
         new Statistics().getStatistics();
