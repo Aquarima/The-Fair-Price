@@ -45,8 +45,7 @@ public class DifficultySelector {
     }
 
     public final static int getMaxPrice() {
-        maxPrice = d.valueOf(input).getMaxPrice();
-        return maxPrice;
+        return d.valueOf(input).getMaxPrice();
     }
 
 }
