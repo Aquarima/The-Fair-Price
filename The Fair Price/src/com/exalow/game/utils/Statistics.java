@@ -11,7 +11,7 @@ public class Statistics {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("\n----------[STATS]----------");
-        stringBuilder.append("\n         Time : " + time +  "s");
+        stringBuilder.append("\n         Time : " + time + "s");
         stringBuilder.append("\n         Tries : " + tries);
         stringBuilder.append("\n---------------------------");
 

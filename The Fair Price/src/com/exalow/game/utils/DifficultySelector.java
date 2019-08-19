@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class DifficultySelector {
 
-    private Difficulty d;
+    private static Difficulty d;
     private List<Difficulty> difficulties = new LinkedList<>();
-    private String input;
+    private static String input;
     private Difficulty difficulty;
     private static int maxPrice;
 
@@ -38,26 +38,15 @@ public class DifficultySelector {
                 throw new RuntimeException("[ERROR] Invalid difficulty !");
             }
 
-            switch (input) {
-                case "ESAY":
-                    maxPrice = d.ESAY.getMaxPrice();
-                    break;
-                case "MEDIUM":
-                    maxPrice = d.MEDIUM.getMaxPrice();
-                    break;
-                case "HARD":
-                    maxPrice = d.HARD.getMaxPrice();
-                    break;
-                default:
-            }
-
             break;
 
         }
 
     }
 
-    public static int getMaxPrice() {
+    public final static int getMaxPrice() {
+        maxPrice = d.valueOf(input).getMaxPrice();
         return maxPrice;
     }
+
 }
