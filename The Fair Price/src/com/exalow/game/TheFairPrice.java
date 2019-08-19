@@ -15,7 +15,6 @@ public class TheFairPrice {
     public static void main(String[] args) {
 
         String answer;
-        int maxPrice;
         int input = 0;
         long start = 0;
         long end = 0;
@@ -25,7 +24,7 @@ public class TheFairPrice {
 
         DifficultySelector difficultySelector = new DifficultySelector();
 
-        maxPrice = DifficultySelector.getMaxPrice();
+        int maxPrice = DifficultySelector.getMaxPrice();
 
         int price = random.nextInt(maxPrice);
 
@@ -37,7 +36,7 @@ public class TheFairPrice {
             try {
                 input = scanner.nextInt();
             } catch (InputMismatchException e) {
-                throw new RuntimeException("Invalid input !");
+                throw new RuntimeException("Invalid value !");
             }
 
             if (input > maxPrice) {
