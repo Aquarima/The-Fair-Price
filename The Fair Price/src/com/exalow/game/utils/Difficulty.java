@@ -1,10 +1,10 @@
 package com.exalow.game.utils;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Difficulty {
 
-    enum Difficuties {
+    public enum Difficuties {
 
         EASY(1000), MEDIUM(5000), HARD(10000);
 
@@ -13,33 +13,38 @@ public class Difficulty {
         Difficuties(int maxPrice) {
             this.maxPrice = maxPrice;
         }
+
+        public int getMaxPrice() {
+            return maxPrice;
+        }
     }
 
-    private Difficuties difficulty;
+    private Difficuties d;
+    private static String selectedDifficulty;
 
-    public void setDifficulty() {
+    public void Difficulty() {
 
+        List<String> difficulties = Arrays.asList("EASY", "MEDIUM", "HARD");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Difficulty : ");
 
-        for (Difficuties difficulties : Difficuties.values()) {
+        for (Difficuties d : Difficuties.values()) {
             StringBuilder stringBuilder = new StringBuilder(" - ");
-            stringBuilder.append(difficulties);
+            stringBuilder.append(d);
             System.out.println(stringBuilder);
         }
 
-        System.out.print("\n Difficulty -> ");
-        String input = scanner.nextLine().toUpperCase();
+        do {
+            System.out.print(" \nDifficulty -> ");
+            selectedDifficulty = scanner.nextLine().toUpperCase();
+        }while (!difficulties.contains(selectedDifficulty));
 
-        try {
-            difficulty = Difficuties.valueOf(input);
-        } catch (IllegalArgumentException e) {
-            throw new RuntimeException("Invalid difficulty !");
-        }
-
-        System.out.println(difficulty);
+        System.out.println("\nYou have selected " + selectedDifficulty);
 
     }
 
+    public int getMaxPrice() {
+        return d.valueOf(selectedDifficulty).getMaxPrice();
+    }
 }
