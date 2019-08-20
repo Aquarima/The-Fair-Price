@@ -18,6 +18,7 @@ public class FairPrice {
     public FairPrice() {
 
         int input = 0;
+        tries = 0;
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();

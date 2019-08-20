@@ -6,7 +6,7 @@ public class Difficulty {
 
     public enum Difficuties {
 
-        EASY(1000), MEDIUM(5000), HARD(10000);
+        EASY(1), MEDIUM(5000), HARD(10000);
 
         private int maxPrice;
 
