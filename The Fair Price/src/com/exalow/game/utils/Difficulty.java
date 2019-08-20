@@ -44,7 +44,7 @@ public class Difficulty {
 
     }
 
-    public int getMaxPrice() {
-        return d.valueOf(selectedDifficulty).getMaxPrice();
+    public static String getSelectedDifficulty() {
+        return selectedDifficulty;
     }
 }
